@@ -1,8 +1,9 @@
 #include "Process.h"
 
-Process::Process(int pid, int arrival_time, int burst_time) {
-    cur_id = 0 ;
-    this->pid = pid ;
+int Process::cur_id = 0 ;
+
+Process::Process(int arrival_time, int burst_time) {
+    this->pid = cur_id++ ;
     this->arrival_time = arrival_time ;
     this->burst_time = burst_time ;
 }
