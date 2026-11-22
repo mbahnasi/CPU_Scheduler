@@ -5,6 +5,7 @@ set(CMAKE_CXX_STANDARD 20)
 
 add_executable(CPU_Scheduler main.cpp
         headers/Process.h
-        src/Process.cpp)
+        src/Process.cpp
+        headers/policy.h)
 
 target_include_directories(CPU_Scheduler PRIVATE ${CMAKE_SOURCE_DIR}/headers)
