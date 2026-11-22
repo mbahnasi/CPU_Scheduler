@@ -9,7 +9,7 @@ bool FCFS::empty() {
 
 Process FCFS::next() {
     // the queue can't be empty when this function is called - consider adding and exception here
-    return p_queue.top() ;
+    return p_queue.front() ;
 }
 
 void FCFS::dispatch_next() {
