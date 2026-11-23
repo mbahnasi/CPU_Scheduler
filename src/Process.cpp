@@ -6,6 +6,11 @@ Process::Process(int arrival_time, int burst_time) {
     this->pid = cur_id++ ;
     this->arrival_time = arrival_time ;
     this->burst_time = burst_time ;
+    this->rem_time = burst_time ;
+}
+
+int Process::get_pid() {
+    return pid ;
 }
 
 int Process::get_arrival_time()  {

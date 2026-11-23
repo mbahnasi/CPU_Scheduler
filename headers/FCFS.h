@@ -9,8 +9,7 @@ class FCFS : Policy {
 private:
     queue<Process> p_queue ;
 public:
-    Process next() override;
-    void dispatch_next() override;
+    Process next(Process cur, int exec_start_time, int cur_time) override;
     void add(Process) override ;
     bool empty() override;
 };
