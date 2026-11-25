@@ -3,8 +3,9 @@
 #include "Process.h"
 #include <bits/stdc++.h>
 using namespace std ;
-Simulator::Simulator(Policy &used_policy) {
+Simulator::Simulator(Policy &used_policy, vector<Process> generated) {
     this->used_policy = &used_policy ;
+    this->generated_p = generated ;
 }
 
 void Simulator::allocate_to_CPU(Process& running, int &exec_start_time, int process_idx) {
