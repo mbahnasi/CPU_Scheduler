@@ -8,13 +8,16 @@ bool FCFS::empty() {
 }
 
 Process FCFS::next(Process cur, int exec_start_time, int cur_time) {
-    // the queue can't be empty when this function is called - consider adding and exception here
+
     auto p = cur ;
     if (cur.get_pid() == -1 || cur_time - exec_start_time == cur.get_burst_time() ) {
-        // if we just started or the current process has finished
-        p = p_queue.front();
-        p_queue.pop() ;
-        return p ;
+        // if CPU is idle or the current process has finished
+        if (empty())
+            p = Process{} ;
+        else{
+            p = p_queue.front();
+            p_queue.pop() ;
+        }
     }
     return p ;
 }

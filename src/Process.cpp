@@ -9,6 +9,13 @@ Process::Process(int arrival_time, int burst_time) {
     this->rem_time = burst_time ;
 }
 
+Process::Process() {
+    this->pid = -1;
+    this->arrival_time = -1 ;
+    this->rem_time = -1 ;
+    this->burst_time = -1 ;
+}
+
 int Process::get_pid() {
     return pid ;
 }
